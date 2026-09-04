@@ -1,5 +1,5 @@
 """
-dataset_clf_bml.py - BatteryML RUL classification dataset.
+NMC_dataset_loader.py - BatteryML RUL classification dataset.
 
 """
 
