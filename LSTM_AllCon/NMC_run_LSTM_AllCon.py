@@ -11,7 +11,7 @@ Each config gets its own output subfolder:
     <output_dir>/C2/...
     ...
 and a final summary is printed and saved to:
-    <output_dir>/lstm_sweep_results.csv
+    <output_dir>/NMC_lstm_results.csv
 
 How to run:
     python NMC_run_LSTM_AllCon.py --content_dir ./content_NMC --output_dir ./NMC_lstm
@@ -196,7 +196,7 @@ def main(args):
         print(f"{r['config']:<8} {r['n_params']:>10,} {r['best_val_acc']:>11.4f} "
               f"{r['test_acc']:>9.4f} {r['test_loss']:>9.4f}")
 
-    csv_path = os.path.join(args.output_dir, "lstm_sweep_results.csv")
+    csv_path = os.path.join(args.output_dir, "NMC_lstm_results.csv")
     with open(csv_path, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(results[0].keys()))
         writer.writeheader()
